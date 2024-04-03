@@ -25,7 +25,7 @@ QueueLevelHandler::QueueLevelHandler(
 std::pair<int, RingTopology::Direction> QueueLevelHandler::get_next_queue_id() {
   RingTopology::Direction dir;
   if ((backend != AstraNetworkAPI::BackendType::Garnet || level > 0) &&
-      queues.size() > 1 && allocator >= (queues.size() / 2)) {
+      queues.size() > 1 && static_cast<std::vector<int>::size_type>(allocator) >= (queues.size() / 2)) {
     dir = RingTopology::Direction::Anticlockwise;
   } else {
     dir = RingTopology::Direction::Clockwise;
@@ -34,7 +34,7 @@ std::pair<int, RingTopology::Direction> QueueLevelHandler::get_next_queue_id() {
     return std::make_pair(-1, dir);
   }
   int tmp = queues[allocator++];
-  if (allocator >= queues.size()) {
+  if (static_cast<std::vector<int>::size_type>(allocator) >= queues.size()) {
     allocator = 0;
   }
   return std::make_pair(tmp, dir);
@@ -48,7 +48,7 @@ std::pair<int, RingTopology::Direction> QueueLevelHandler::
     return std::make_pair(-1, dir);
   }
   int tmp = queues[first_allocator++];
-  if (first_allocator >= queues.size() / 2) {
+  if (static_cast<std::vector<int>::size_type>(first_allocator) >= queues.size() / 2) {
     first_allocator = 0;
   }
   return std::make_pair(tmp, dir);
@@ -62,7 +62,7 @@ std::pair<int, RingTopology::Direction> QueueLevelHandler::
     return std::make_pair(-1, dir);
   }
   int tmp = queues[last_allocator++];
-  if (last_allocator >= queues.size()) {
+  if (static_cast<std::vector<int>::size_type>(last_allocator) >= queues.size()) {
     last_allocator = queues.size() / 2;
   }
   return std::make_pair(tmp, dir);

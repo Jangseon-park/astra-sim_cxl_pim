@@ -189,7 +189,7 @@ void CSVWriter::write_cell(int row, int column, std::string data) {
   do {
     lseek(fildes, 0, SEEK_SET);
     status = write(fildes, str.c_str(), str.length());
-  } while (status != str.length());
+  } while (static_cast<std::vector<int>::size_type>(status) != str.length());
 
   do {
     status = lseek(fildes, 0, SEEK_SET);
