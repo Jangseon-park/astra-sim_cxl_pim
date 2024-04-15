@@ -5,7 +5,7 @@ LICENSE file in the root directory of this source tree.
 
 #pragma once
 
-namespace AstraSimAnalytical {
+namespace AstraSimCXL {
 
 /**
  * ChunkIdGeneratorEntry tracks the chunk id generated
@@ -51,4 +51,4 @@ class ChunkIdGeneratorEntry {
   int recv_id;
 };
 
-} // namespace AstraSimAnalytical
+} // namespace AstraSimCXL

@@ -5,7 +5,7 @@ LICENSE file in the root directory of this source tree.
 
 #include "common/CmdLineParser.hh"
 
-using namespace AstraSimAnalytical;
+using namespace AstraSimCXL;
 
 CmdLineParser::CmdLineParser(const char* const argv0) noexcept
     : options(argv0, "ASTRA-sim") {

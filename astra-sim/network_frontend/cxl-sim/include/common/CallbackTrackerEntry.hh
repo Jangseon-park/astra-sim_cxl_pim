@@ -9,9 +9,9 @@ LICENSE file in the root directory of this source tree.
 #include <astra-network-cxlsim/common/Type.hh>
 #include <optional>
 
-using namespace NetworkAnalytical;
+using namespace NetworkCXL;
 
-namespace AstraSimAnalytical {
+namespace AstraSimCXL {
 
 /**
  * CallbackTrackerEntry manages sim_send() and sim_recv() callbacks
@@ -82,4 +82,4 @@ class CallbackTrackerEntry {
   bool transmission_finished;
 };
 
-} // namespace AstraSimAnalytical
+} // namespace AstraSimCXL

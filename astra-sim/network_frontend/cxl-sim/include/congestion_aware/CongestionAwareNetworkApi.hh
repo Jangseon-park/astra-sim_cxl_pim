@@ -9,11 +9,11 @@ LICENSE file in the root directory of this source tree.
 #include "common/CommonNetworkApi.hh"
 
 using namespace AstraSim;
-using namespace AstraSimAnalytical;
-using namespace NetworkAnalytical;
-using namespace NetworkAnalyticalCongestionAware;
+using namespace AstraSimCXL;
+using namespace NetworkCXL;
+using namespace NetworkCXLCongestionAware;
 
-namespace AstraSimAnalyticalCongestionAware {
+namespace AstraSimCXLCongestionAware {
 
 class CongestionAwareNetworkApi final : public CommonNetworkApi {
  public:
@@ -49,4 +49,4 @@ class CongestionAwareNetworkApi final : public CommonNetworkApi {
   static std::shared_ptr<Topology> topology;
 };
 
-} // namespace AstraSimAnalyticalCongestionAware
+} // namespace AstraSimCXLCongestionAware

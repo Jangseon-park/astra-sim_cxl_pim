@@ -6,7 +6,7 @@ LICENSE file in the root directory of this source tree.
 #include "common/ChunkIdGeneratorEntry.hh"
 #include <cassert>
 
-using namespace AstraSimAnalytical;
+using namespace AstraSimCXL;
 
 ChunkIdGeneratorEntry::ChunkIdGeneratorEntry() noexcept
     : send_id(-1), recv_id(-1) {}

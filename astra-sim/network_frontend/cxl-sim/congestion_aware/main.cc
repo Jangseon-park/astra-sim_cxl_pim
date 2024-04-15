@@ -11,11 +11,11 @@ LICENSE file in the root directory of this source tree.
 #include "congestion_aware/CongestionAwareNetworkApi.hh"
 
 using namespace AstraSim;
-using namespace Analytical;
-using namespace AstraSimAnalytical;
-using namespace AstraSimAnalyticalCongestionAware;
-using namespace NetworkAnalytical;
-using namespace NetworkAnalyticalCongestionAware;
+using namespace CXL;
+using namespace AstraSimCXL;
+using namespace AstraSimCXLCongestionAware;
+using namespace NetworkCXL;
+using namespace NetworkCXLCongestionAware;
 
 int main(int argc, char* argv[]) {
   // Parse command line arguments
@@ -60,7 +60,7 @@ int main(int argc, char* argv[]) {
   // Create ASTRA-sim related resources
   auto network_apis = std::vector<std::unique_ptr<CongestionAwareNetworkApi>>();
   const auto memory_api =
-      std::make_unique<AnalyticalRemoteMemory>(remote_memory_configuration);
+      std::make_unique<CXLRemoteMemory>(remote_memory_configuration);
   auto systems = std::vector<Sys*>();
 
   auto queues_per_dim = std::vector<int>();

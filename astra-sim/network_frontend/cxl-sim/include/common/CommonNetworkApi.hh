@@ -14,10 +14,10 @@ LICENSE file in the root directory of this source tree.
 #include "common/ChunkIdGenerator.hh"
 
 using namespace AstraSim;
-using namespace AstraSimAnalytical;
-using namespace NetworkAnalytical;
+using namespace AstraSimCXL;
+using namespace NetworkCXL;
 
-namespace AstraSimAnalytical {
+namespace AstraSimCXL {
 
 /**
  * CommonNetworkApi implements common AstraNetworkAPI interface
@@ -102,4 +102,4 @@ class CommonNetworkApi : public AstraNetworkAPI {
   static int dims_count;
 };
 
-} // namespace AstraSimAnalytical
+} // namespace AstraSimCXL

@@ -6,8 +6,8 @@ LICENSE file in the root directory of this source tree.
 #include "common/CallbackTrackerEntry.hh"
 #include <cassert>
 
-using namespace NetworkAnalytical;
-using namespace AstraSimAnalytical;
+using namespace NetworkCXL;
+using namespace AstraSimCXL;
 
 CallbackTrackerEntry::CallbackTrackerEntry() noexcept
     : send_event(std::nullopt),

@@ -7,9 +7,9 @@ LICENSE file in the root directory of this source tree.
 #include <cassert>
 
 using namespace AstraSim;
-using namespace AstraSimAnalyticalCongestionUnaware;
-using namespace NetworkAnalytical;
-using namespace NetworkAnalyticalCongestionUnaware;
+using namespace AstraSimCXLCongestionUnaware;
+using namespace NetworkCXL;
+using namespace NetworkCXLCongestionUnaware;
 
 std::shared_ptr<Topology> CongestionUnawareNetworkApi::topology;
 

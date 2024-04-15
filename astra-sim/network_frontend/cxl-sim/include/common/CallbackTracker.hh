@@ -9,7 +9,7 @@ LICENSE file in the root directory of this source tree.
 #include "common/CallbackTrackerEntry.hh"
 #include "common/ChunkIdGenerator.hh"
 
-namespace AstraSimAnalytical {
+namespace AstraSimCXL {
 
 /**
  * CallbackTracker keeps track of sim_send() and sim_recv() callbacks of each
@@ -80,4 +80,4 @@ class CallbackTracker {
   std::map<Key, CallbackTrackerEntry> tracker;
 };
 
-} // namespace AstraSimAnalytical
+} // namespace AstraSimCXL

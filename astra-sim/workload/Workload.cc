@@ -121,6 +121,7 @@ void Workload::issue(shared_ptr<Chakra::ETFeederNode> node) {
       if (sys->trace_enabled) {
         cout << "issue,sys->id=" << sys->id << ",tick=" << Sys::boostedTick()
              << ",node->id=" << node->id() << ",node->name=" << node->name()
+             << ", node->type=" << node->type()
              << endl;
       }
       issue_remote_mem(node);
@@ -133,6 +134,7 @@ void Workload::issue(shared_ptr<Chakra::ETFeederNode> node) {
         if (sys->trace_enabled) {
           cout << "issue,sys->id=" << sys->id << ",tick=" << Sys::boostedTick()
                << ",node->id=" << node->id() << ",node->name=" << node->name()
+               << ", node->type=" << node->type()
                << endl;
         }
         issue_comp(node);
@@ -145,6 +147,7 @@ void Workload::issue(shared_ptr<Chakra::ETFeederNode> node) {
       if (sys->trace_enabled) {
         cout << "issue,sys->id=" << sys->id << ",tick=" << Sys::boostedTick()
              << ",node->id=" << node->id() << ",node->name=" << node->name()
+             << ", node->type=" << node->type()
              << endl;
       }
       issue_comm(node);

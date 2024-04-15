@@ -9,7 +9,7 @@ LICENSE file in the root directory of this source tree.
 #include <cstdlib>
 #include <iostream>
 
-namespace AstraSimAnalytical {
+namespace AstraSimCXL {
 
 /**
  * CmdLineParser parses command line arguments using cxxopts
@@ -65,4 +65,4 @@ class CmdLineParser {
   void define_options() noexcept;
 };
 
-} // namespace AstraSimAnalytical
+} // namespace AstraSimCXL

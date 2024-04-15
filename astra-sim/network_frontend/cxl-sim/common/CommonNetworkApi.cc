@@ -7,8 +7,8 @@ LICENSE file in the root directory of this source tree.
 #include <cassert>
 
 using namespace AstraSim;
-using namespace AstraSimAnalytical;
-using namespace NetworkAnalytical;
+using namespace AstraSimCXL;
+using namespace NetworkCXL;
 
 std::shared_ptr<EventQueue> CommonNetworkApi::event_queue = nullptr;
 

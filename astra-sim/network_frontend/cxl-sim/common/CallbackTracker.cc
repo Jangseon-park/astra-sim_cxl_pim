@@ -6,7 +6,7 @@ LICENSE file in the root directory of this source tree.
 #include "common/CallbackTracker.hh"
 #include <cassert>
 
-using namespace AstraSimAnalytical;
+using namespace AstraSimCXL;
 
 CallbackTracker::CallbackTracker() noexcept {
   // initialize tracker

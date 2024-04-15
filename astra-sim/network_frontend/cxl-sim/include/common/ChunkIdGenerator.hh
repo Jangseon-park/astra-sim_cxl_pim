@@ -10,9 +10,9 @@ LICENSE file in the root directory of this source tree.
 #include <tuple>
 #include "common/ChunkIdGeneratorEntry.hh"
 
-using namespace NetworkAnalytical;
+using namespace NetworkCXL;
 
-namespace AstraSimAnalytical {
+namespace AstraSimCXL {
 
 /**
  * ChunkIdGenerator generates unique chunk id for sim_send() and sim_recv()
@@ -63,4 +63,4 @@ class ChunkIdGenerator {
   std::map<Key, ChunkIdGeneratorEntry> chunk_id_map;
 };
 
-} // namespace AstraSimAnalytical
+} // namespace AstraSimCXL
