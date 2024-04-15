@@ -4,8 +4,7 @@ LICENSE file in the root directory of this source tree.
 *******************************************************************************/
 
 #pragma once
-
-#include <astra-network-cxlsim/common/EventQueue.hh>
+#include <network_backend/cxl-sim/backbone/include/cxl-sim/common/EventQueue.h>
 #include <astra-sim/system/AstraNetworkAPI.hh>
 #include <astra-sim/system/Common.hh>
 #include <memory>

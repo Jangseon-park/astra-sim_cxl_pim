@@ -4,9 +4,8 @@ LICENSE file in the root directory of this source tree.
 *******************************************************************************/
 
 #pragma once
-
-#include <astra-network-cxlsim/common/Event.hh>
-#include <astra-network-cxlsim/common/Type.hh>
+#include <network_backend/cxl-sim/backbone/include/cxl-sim/common/Event.h>
+#include <network_backend/cxl-sim/backbone/include/cxl-sim/common/Type.h>
 #include <optional>
 
 using namespace NetworkCXL;

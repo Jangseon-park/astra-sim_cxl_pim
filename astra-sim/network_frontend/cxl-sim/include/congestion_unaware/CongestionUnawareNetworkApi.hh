@@ -5,8 +5,8 @@ LICENSE file in the root directory of this source tree.
 
 #pragma once
 
-#include <astra-network-cxlsim/common/Type.hh>
-#include <astra-network-cxlsim/congestion_unaware/Topology.hh>
+#include <network_backend/cxl-sim/backbone/include/cxl-sim/common/Type.h>
+#include <network_backend/cxl-sim/backbone/include/cxl-sim/analytical/Topology.h>
 #include <vector>
 #include "common/CommonNetworkApi.hh"
 

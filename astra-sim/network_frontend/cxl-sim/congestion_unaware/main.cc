@@ -2,10 +2,9 @@
 This source code is licensed under the MIT license found in the
 LICENSE file in the root directory of this source tree.
 *******************************************************************************/
-
-#include <astra-network-cxlsim/common/EventQueue.hh>
-#include <astra-network-cxlsim/common/NetworkParser.hh>
-#include <astra-network-cxlsim/congestion_unaware/Helper.hh>
+#include <network_backend/cxl-sim/backbone/include/cxl-sim/common/EventQueue.h>
+#include <network_backend/cxl-sim/backbone/include/cxl-sim/common/NetworkParser.h>
+#include <network_backend/cxl-sim/backbone/include/cxl-sim/analytical/Helper.h>
 #include <remote_memory_backend/cxl-sim/CXLRemoteMemory.hh>
 #include "common/CmdLineParser.hh"
 #include "congestion_unaware/CongestionUnawareNetworkApi.hh"
