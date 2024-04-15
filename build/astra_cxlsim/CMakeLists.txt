@@ -17,7 +17,7 @@ set(CMAKE_CXX_FLAGS_RELEASE "-O3")
 project(AstraSim_CXLNetworkSim)
 
 # Compilation target
-set(BUILDTARGET "all" CACHE STRING "Compilation target ([all]/congestion_unaware/congestion_aware)")
+set(BUILDTARGET "all" CACHE STRING "Compilation target ([all]/analytical/sophisticated)")
 
 # Compile AstraSim library
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/../../ AstraSim)

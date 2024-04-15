@@ -14,29 +14,21 @@ endif ()
 project(AstraSim_CXLSim)
 
 # Compilation target
-set(BUILDTARGET "all" CACHE STRING "Compilation target ([all]/congestion_unaware/congestion_aware)")
+set(BUILDTARGET "all" CACHE STRING "Compilation target ([all]/Analytical/Sophisticated)")
 
 # Include src files to compile
-file(GLOB srcs_common
+file(GLOB srcs
         ${CMAKE_CURRENT_SOURCE_DIR}/common/*.cc
-)
-
-file(GLOB srcs_congestion_unaware
         ${CMAKE_CURRENT_SOURCE_DIR}/congestion_unaware/*.cc
 )
 
-file(GLOB srcs_congestion_aware
-        ${CMAKE_CURRENT_SOURCE_DIR}/congestion_aware/*.cc
-)
-
-# Compile Congestion Unaware Backend
-if (BUILDTARGET STREQUAL "all" OR BUILDTARGET STREQUAL "congestion_unaware")
-    add_executable(AstraSim_CXLSim_Congestion_Unaware ${srcs_congestion_unaware} ${srcs_common})
+if (BUILDTARGET STREQUAL "all" OR BUILDTARGET STREQUAL "Analytical")
+    add_executable(AstraSim_CXLSim_Congestion_Unaware ${srcs})
     target_sources(AstraSim_CXLSim_Congestion_Unaware PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/congestion_unaware/main.cc)
 
     # Link libraries
     target_link_libraries(AstraSim_CXLSim_Congestion_Unaware LINK_PRIVATE AstraSim)
-    target_link_libraries(AstraSim_CXLSim_Congestion_Unaware LINK_PRIVATE CXLSim_Congestion_Unaware)
+    target_link_libraries(AstraSim_CXLSim_Congestion_Unaware LINK_PRIVATE CXLNetworkSim)
 
     # Include directories
     target_include_directories(AstraSim_CXLSim_Congestion_Unaware PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include/)
@@ -46,30 +38,6 @@ if (BUILDTARGET STREQUAL "all" OR BUILDTARGET STREQUAL "congestion_unaware")
     # Properties
     set_target_properties(AstraSim_CXLSim_Congestion_Unaware PROPERTIES COMPILE_WARNING_AS_ERROR ON)
     set_target_properties(AstraSim_CXLSim_Congestion_Unaware
-            PROPERTIES
-            RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/../bin/
-            LIBRARY_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/../lib/
-            ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/../lib/
-    )
-endif ()
-
-# Compile Congestion Aware Backend
-if (BUILDTARGET STREQUAL "all" OR BUILDTARGET STREQUAL "congestion_aware")
-    add_executable(AstraSim_CXLSim_Congestion_Aware ${srcs_congestion_aware} ${srcs_common})
-    target_sources(AstraSim_CXLSim_Congestion_Aware PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/congestion_aware/main.cc)
-
-    # Link libraries
-    target_link_libraries(AstraSim_CXLSim_Congestion_Aware LINK_PRIVATE AstraSim)
-    target_link_libraries(AstraSim_CXLSim_Congestion_Aware LINK_PRIVATE CXLSim_Congestion_Aware)
-
-    # Include directories
-    target_include_directories(AstraSim_CXLSim_Congestion_Aware PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include/)
-    target_include_directories(AstraSim_CXLSim_Congestion_Aware PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/../../../extern/)
-    target_include_directories(AstraSim_CXLSim_Congestion_Aware PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/../../../extern/helper)
-
-    # Properties
-    set_target_properties(AstraSim_CXLSim_Congestion_Aware PROPERTIES COMPILE_WARNING_AS_ERROR ON)
-    set_target_properties(AstraSim_CXLSim_Congestion_Aware
             PROPERTIES
             RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/../bin/
             LIBRARY_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/../lib/
